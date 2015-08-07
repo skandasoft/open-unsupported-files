@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Open Unsupported File Format",
   "keywords": [
+    "word document",
+    "excel",
+    "pdf",
   ],
   "repository": "https://github.com/skandasoft/open-unsupported-files",
   "license": "MIT",
