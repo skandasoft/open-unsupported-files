@@ -6,7 +6,9 @@
   "keywords": [
     "word document",
     "excel",
-    "pdf"
+    "pdf",
+    "external program",
+    "open in"
   ],
   "repository": "https://github.com/skandasoft/open-unsupported-files",
   "license": "MIT",
