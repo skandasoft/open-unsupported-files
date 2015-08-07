@@ -1,14 +1,13 @@
-{BufferedProcess} = require 'atom'
+shell = require('shell')
 {requirePackages} = require 'atom-utils'
 module.exports =
   config:
     extensions:
       title: 'extensions'
       type: 'string'
-      default: 'doc,docx,xls,pdf'
+      default: 'doc,docx,xls,pdf,exe'
 
   activate: ->
-    @cmd = if process.platform is 'win32' then 'cmd' else 'open'
     @extensions = atom.config.get('open-unsupported-files.extensions')?.split(',')
     requirePackages('tree-view').then ([treeView]) =>
       if tv = treeView.treeView
@@ -19,8 +18,7 @@ module.exports =
           filepath = e.target.attributes['data-path'].nodeValue
           filename = e.target.attributes['data-name'].nodeValue
           if filename?.substring(filename.indexOf('.') + 1 ) in @extensions
-            args = [filepath]
-            new BufferedProcess({@cmd,args})
+            shell.openExternal(filepath)
             return false
           else
             @originalEntryClicked.call(tv,e)

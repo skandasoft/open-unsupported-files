@@ -1,7 +1,11 @@
-# open-unsupported-files package
+# open-unsupported-files
+------------------------
 
-Open Unsupported formats with thier default editor. For eg. word,excel.
 
-Config
+Open Unsupported formats in their default editor. For eg. word,excel.
 
-Default : XLS,DOC,DOCX has been maintained. you could add other formats(comma separated).
+
+##Config option
+----------------
+
+XLS,DOC,DOCX has been maintained by default. you could add other file extensions(comma separated).
