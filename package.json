@@ -10,7 +10,9 @@
     "external program",
     "open in"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "atom-utils": "~0.5.0"
+  },
   "repository": "https://github.com/skandasoft/open-unsupported-files",
   "license": "MIT",
   "engines": {
