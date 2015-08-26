@@ -15,9 +15,9 @@ module.exports =
         tv.entryClicked =  (e) =>
           entry = e.currentTarget
           return @originalEntryClicked.call(tv,e) unless entry.constructor.name is 'tree-view-file'
-          filepath = e.target.attributes['data-path']?.nodeValue
+          filepath = e.target.firstChild.attributes['data-path']?.nodeValue
           return @originalEntryClicked.call(tv,e) unless filepath
-          filename = e.target.attributes['data-name']?.nodeValue
+          filename = e.target.firstChild.attributes['data-name']?.nodeValue
           if filename?.substring(filename.indexOf('.') + 1 ) in @extensions
             shell.openExternal(filepath)
             return false
