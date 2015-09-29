@@ -1,0 +1,40 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Users\\Administrator\\AppData\\Local\\atom\\app-1.0.19\\resources\\app\\apm\\bin\\node.exe',
+1 verbose cli   'c:\\Users\\Administrator\\AppData\\Local\\atom\\app-1.0.19\\resources\\app\\apm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'version',
+1 verbose cli   'patch',
+1 verbose cli   '-m',
+1 verbose cli   'Prepare %s release' ]
+2 info using npm@2.13.3
+3 info using node@v0.10.40
+4 info git [ 'status', '--porcelain' ]
+5 info preversion open-unsupported-files@1.0.9
+6 verbose version.write data { name: 'open-unsupported-files',
+6 verbose version.write   main: './lib/open-unsupported-files',
+6 verbose version.write   version: '1.0.9',
+6 verbose version.write   description: 'Open Unsupported File Format',
+6 verbose version.write   keywords: [ 'word document', 'excel', 'pdf', 'external program', 'open in' ],
+6 verbose version.write   repository: 'https://github.com/skandasoft/open-unsupported-files',
+6 verbose version.write   license: 'MIT',
+6 verbose version.write   engines: { atom: '>=1.0.0 <2.0.0' },
+6 verbose version.write   dependencies: {} } to package.json
+7 info version open-unsupported-files@1.0.9
+8 info git [ 'add', 'package.json' ]
+9 info git [ 'commit', '-m', 'Prepare 1.0.9 release' ]
+10 info git [ 'tag', 'v1.0.9', '-am', 'Prepare 1.0.9 release' ]
+11 verbose stack Error: Command failed: fatal: tag 'v1.0.9' already exists
+11 verbose stack
+11 verbose stack     at ChildProcess.exithandler (child_process.js:658:15)
+11 verbose stack     at ChildProcess.emit (events.js:98:17)
+11 verbose stack     at maybeClose (child_process.js:766:16)
+11 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:833:5)
+12 verbose cwd c:\Users\Administrator\.atom\packages\open-unsupported-files
+13 error Windows_NT 6.1.7601
+14 error argv "c:\\Users\\Administrator\\AppData\\Local\\atom\\app-1.0.19\\resources\\app\\apm\\bin\\node.exe" "c:\\Users\\Administrator\\AppData\\Local\\atom\\app-1.0.19\\resources\\app\\apm\\node_modules\\npm\\bin\\npm-cli.js" "version" "patch" "-m" "Prepare %s release"
+15 error node v0.10.40
+16 error npm  v2.13.3
+17 error code 128
+18 error Command failed: fatal: tag 'v1.0.9' already exists
+19 error If you need help, you may report this error at:
+19 error     <https://github.com/npm/npm/issues>
+20 verbose exit [ 1, true ]
