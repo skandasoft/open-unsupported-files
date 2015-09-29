@@ -19,7 +19,7 @@ module.exports =
           return @originalEntryClicked.call(tv,e) unless filepath
           filename = entry.file.name
           if filename?.substring(filename.indexOf('.') + 1 ) in @extensions
-            shell.openExternal(filepath)
+            shell.openItem(filepath)
             return false
           else
             @originalEntryClicked.call(tv,e)
