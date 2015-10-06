@@ -15,12 +15,11 @@ module.exports =
         tv.entryClicked =  (e) =>
           entry = e.currentTarget
           return @originalEntryClicked.call(tv,e) unless entry.constructor.name is 'tree-view-file'
-          return unless e.target.firstChild
-          filepath = e.target.firstChild.attributes['data-path']?.nodeValue
+          filepath = entry.file.path
           return @originalEntryClicked.call(tv,e) unless filepath
-          filename = e.target.firstChild.attributes['data-name']?.nodeValue
+          filename = entry.file.name
           if filename?.substring(filename.indexOf('.') + 1 ) in @extensions
-            shell.openExternal(filepath)
+            shell.openItem(filepath)
             return false
           else
             @originalEntryClicked.call(tv,e)
