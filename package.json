@@ -1,7 +1,7 @@
 {
   "name": "open-unsupported-files",
   "main": "./lib/open-unsupported-files",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Open Unsupported File Format",
   "keywords": [
     "word document",
@@ -16,5 +16,6 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "atom-utils": "^2.11.3" }
+    "atom-utils": "^2.11.3"
+  }
 }
