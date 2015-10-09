@@ -2,7 +2,7 @@
 ------------------------
 
 
-Open Unsupported formats in their default editor. For eg. word,excel.
+OPEN UNSUPPORTED FORMATS IN THEIR DEFAULT EDITOR. FOR EG. WORD,EXCEL.
 
 
 ##Config option
