@@ -18,7 +18,7 @@ module.exports =
           filepath = entry.file.path
           return @originalEntryClicked.call(tv,e) unless filepath
           filename = entry.file.name
-          if filename?.substring(filename.indexOf('.') + 1 ) in @extensions
+          if filename?.substring(filename.indexOf('.') + 1 ).toLowerCase() in @extensions
             shell.openItem(filepath)
             return false
           else
