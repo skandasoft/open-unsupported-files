@@ -5,7 +5,7 @@ module.exports =
     extensions:
       title: 'extensions'
       type: 'string'
-      default: 'doc,xls,ppt,docx,xlsx,pptx,pdf,rtf,zip,7z,rar,tar,tar.gz,tar.bz2'
+      default: 'doc,xls,ppt,docx,xlsx,pptx,pdf,rtf,zip,7z,rar,tar,gz,bz2'
 
   activate: ->
     @extensions = atom.config.get('open-unsupported-files.extensions')?.split(',')
