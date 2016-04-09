@@ -3,7 +3,7 @@ module.exports =
     extensions:
       title: 'extensions'
       type: 'string'
-      default: 'doc,docx,xls,pdf,exe,bat'
+      default: 'doc,xls,ppt,docx,xlsx,pptx,pdf,rtf,zip,7z,rar,tar,gz,bz2,exe,bat'
 
   activate: ->
     @extensions = atom.config.get('open-unsupported-files.extensions')?.split(',')
@@ -18,7 +18,7 @@ module.exports =
           filepath = entry.file.path
           return @originalEntryClicked.call(tv,e) unless filepath
           filename = entry.file.name
-          if filename?.substring(filename.indexOf('.') + 1 ) in @extensions
+          if filename?.substring(filename.lastIndexOf('.') + 1 ).toLowerCase() in @extensions
             shell.openItem(filepath)
             return false
           else
