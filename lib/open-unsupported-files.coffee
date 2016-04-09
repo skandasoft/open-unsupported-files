@@ -1,5 +1,3 @@
-shell = require('shell')
-{requirePackages} = require 'atom-utils'
 module.exports =
   config:
     extensions:
@@ -9,10 +7,12 @@ module.exports =
 
   activate: ->
     @extensions = atom.config.get('open-unsupported-files.extensions')?.split(',')
+    {requirePackages} = require 'atom-utils'
     requirePackages('tree-view').then ([treeView]) =>
       if tv = treeView.treeView
         @originalEntryClicked = tv.entryClicked
         tv.entryClicked =  (e) =>
+          shell = require('shell')
           entry = e.currentTarget
           return @originalEntryClicked.call(tv,e) unless entry.constructor.name is 'tree-view-file'
           filepath = entry.file.path
