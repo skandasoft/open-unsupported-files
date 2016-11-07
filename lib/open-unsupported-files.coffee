@@ -19,7 +19,7 @@ module.exports =
           if extension in @extensions
             if e.originalEvent?.detail is 2
               shell = require('shell')
-              shell.openItem(filepath)
+              shell.openItem(path)
             return false
           else
             @originalFileViewEntryClicked.call(tv, e)
