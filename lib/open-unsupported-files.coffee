@@ -12,12 +12,11 @@ module.exports =
       if tv = treeView.treeView
         @originalFileViewEntryClicked = tv.fileViewEntryClicked
         tv.fileViewEntryClicked =  (e) =>
-          path = e.currentTarget.getPath();
-          filename = e.currentTarget.file.name;
-          extension = filename?.substring(filename.lastIndexOf('.') + 1).toLowerCase()
+          path = e.target.closest('.entry').getPath();
+          extension = path?.substring(path.lastIndexOf('.') + 1).toLowerCase();
 
           if extension in @extensions
-            if e.originalEvent?.detail is 2
+            if e.detail is 2
               shell = require('shell')
               shell.openItem(path)
             return false
