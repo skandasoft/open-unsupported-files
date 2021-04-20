@@ -17,8 +17,8 @@ module.exports =
 
           if extension in @extensions
             if e.detail is 2
-              shell = require('shell')
-              shell.openItem(path)
+              {shell} = require('electron')
+              shell.openPath(path)
             return false
           else
             @originalFileViewEntryClicked.call(tv, e)
